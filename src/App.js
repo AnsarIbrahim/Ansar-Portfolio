@@ -6,12 +6,10 @@ import {
 const App = () => (
   <div>
     <Navbar />
-
     <Home />
     <About />
     <Recent />
     <Contact />
-
   </div>
 );
 
