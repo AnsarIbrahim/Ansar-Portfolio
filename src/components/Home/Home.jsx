@@ -8,7 +8,7 @@ const Home = () => (
     className="flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-tr from-black to-red-300 p-10"
   >
     <motion.h1
-      className="new mb-10 mt-5 w-full p-10 text-center text-5xl font-regular text-white lg:text-left lg:text-[5vw]"
+      className="new mt-5 w-full p-10 text-center text-5xl font-regular text-white lg:text-left lg:text-[5vw]"
       initial={{ x: 1000 }}
       animate={{ x: 0 }}
       transition={{ duration: 1 }}
@@ -20,7 +20,7 @@ const Home = () => (
       Time.
     </motion.h1>
     <motion.p
-      className="new mb-10 w-full p-10 text-center text-2xl font-regular text-gray-300 lg:text-left lg:text-[2vw]"
+      className="new w-full p-10 text-center text-2xl font-regular text-gray-300 lg:text-left lg:text-[2vw]"
       initial={{ y: 1000 }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
