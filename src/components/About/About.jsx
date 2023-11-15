@@ -14,14 +14,14 @@ const About = () => {
     if (inViewImg) {
       controlsImg.start({
         x: 0,
-        transition: { delay: 0.5, duration: 0.5 },
+        transition: { delay: 1, duration: 0.5 },
       });
     }
     if (inViewText) {
       controlsText.start({
         x: 0,
         opacity: 1,
-        transition: { delay: 0.5, duration: 0.5 },
+        transition: { delay: 1, duration: 0.5 },
       });
     }
   }, [controlsImg, inViewImg, controlsText, inViewText]);
