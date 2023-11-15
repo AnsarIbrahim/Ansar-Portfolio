@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.new {
+  font-family: 'Gloock', serif;
+  font-weight: 400;
+}
+
+.new1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
