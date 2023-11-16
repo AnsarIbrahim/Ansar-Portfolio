@@ -36,3 +36,7 @@
   transform: scale(1);
   background: white;
 }
+
+.h-half {
+  height: 110vh;
+}

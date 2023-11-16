@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Navbar, Home, Recent, About, Contact,
+  Navbar, Home, Recent, About, Contact, Add,
 } from './components';
 
 const App = () => (
@@ -9,6 +9,7 @@ const App = () => (
     <Home />
     <About />
     <Recent />
+    <Add />
     <Contact />
   </div>
 );
