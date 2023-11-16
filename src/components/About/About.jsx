@@ -3,6 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import img from '../../assests/Ansar.jpg';
 import '../../CSS/styles.css';
+import resume from '../../assests/Ansar-Resume.pdf';
 
 const About = () => {
   const controlsImg = useAnimation();
@@ -59,19 +60,37 @@ const About = () => {
             href="https://github.com/AnsarIbrahim"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white"
+            className="gradient-text text-white"
           >
             GitHub profile
           </a>
           {' '}
           for more. Reach out to me at
           {' '}
-          <a href="mailto:ansaradheeb@gmail.com" className="text-white">
+          <a
+            href="mailto:ansaradheeb@gmail.com"
+            className="gradient-text text-white"
+          >
             ansaradheeb@gmail.com
             {' '}
           </a>
           for inquiries or collaborations.
         </p>
+        <div className="my-4">
+          <button
+            type="button"
+            className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+          >
+            <a
+              href={resume}
+              className="text-white no-underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get my Resume
+            </a>
+          </button>
+        </div>
       </motion.div>
     </div>
   );
