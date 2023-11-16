@@ -50,7 +50,7 @@ const Navbar = () => {
       <motion.div
         className={`${
           isOpen ? 'z-50 flex' : 'hidden lg:flex'
-        } z-50 w-full flex-col items-center space-y-4 font-inter text-xl lg:mt-10 lg:flex-row lg:justify-around lg:space-y-0 lg:bg-transparent lg:text-base`}
+        } z-50 w-full flex-col items-center space-y-4 font-inter text-xl lg:mt-5 lg:flex-row lg:justify-around lg:space-y-0 lg:bg-transparent lg:text-base`}
         variants={isLargeScreen ? {} : variants}
         initial="closed"
         animate={isOpen ? 'open' : 'closed'}
