@@ -14,3 +14,9 @@
 .about {
   color: #bdb2ff;
 }
+
+.gradient-text {
+  background: -webkit-linear-gradient(left, red, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
