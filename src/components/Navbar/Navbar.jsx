@@ -24,8 +24,8 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 flex w-full flex-wrap justify-between p-5 lg:bg-transparent ${
-        isOpen ? 'mt-0 h-screen bg-black' : 'bg-transparent'
+      className={`fixed top-0 z-50 flex w-full flex-wrap justify-between p-5 lg:bg-transparent ${
+        isOpen ? 'z-50 mt-0 h-screen bg-black' : 'bg-transparent'
       } text-white`}
       initial={{ y: -250 }}
       animate={{ y: 0 }}
@@ -49,8 +49,8 @@ const Navbar = () => {
       </div>
       <motion.div
         className={`${
-          isOpen ? 'flex' : 'hidden lg:flex'
-        } w-full flex-col items-center space-y-4 text-xl lg:mt-10 font-inter lg:flex-row lg:justify-around lg:space-y-0 lg:bg-transparent lg:text-base`}
+          isOpen ? 'z-50 flex' : 'hidden lg:flex'
+        } z-50 w-full flex-col items-center space-y-4 font-inter text-xl lg:mt-10 lg:flex-row lg:justify-around lg:space-y-0 lg:bg-transparent lg:text-base`}
         variants={isLargeScreen ? {} : variants}
         initial="closed"
         animate={isOpen ? 'open' : 'closed'}
@@ -59,7 +59,7 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="Logo"
-            className="h-10 w-10 rounded-full hidden lg:block"
+            className="hidden h-10 w-10 rounded-full lg:block"
           />
         </div>
         <a

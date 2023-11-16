@@ -28,7 +28,10 @@ const About = () => {
   }, [controlsImg, inViewImg, controlsText, inViewText]);
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-black lg:flex-row lg:justify-around lg:p-40">
+    <div
+      id="about"
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-black lg:flex-row lg:justify-around lg:p-40"
+    >
       <motion.div
         className="mb-10 flex w-full flex-col items-start p-5 text-left"
         ref={refImg}
@@ -43,7 +46,6 @@ const About = () => {
         />
       </motion.div>
       <motion.div
-        id="about"
         className="flex w-full flex-col items-start p-5 text-left"
         ref={refText}
         initial={{ x: '40vw', opacity: 0 }}

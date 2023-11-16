@@ -20,3 +20,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.custom-dot-list-style .react-multi-carousel-dot button {
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  margin: 0 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-dot-list-style .react-multi-carousel-dot--active button {
+  transform: scale(1);
+  background: white;
+}
