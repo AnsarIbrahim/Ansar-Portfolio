@@ -48,7 +48,7 @@ const About = () => {
       <motion.div
         className="flex w-full flex-col items-start p-5 text-left"
         ref={refText}
-        initial={{ x: '40vw', opacity: 0 }}
+        initial={{ opacity: 0 }}
         animate={controlsText}
       >
         <h2 className="new mb-5 text-4xl text-white">About</h2>

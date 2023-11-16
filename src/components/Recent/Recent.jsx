@@ -44,7 +44,7 @@ const Recent = () => {
   return (
     <div
       id="recent"
-      className="min-h-screen overflow-hidden bg-cyan-400 p-8 py-20 sm:p-16 md:p-32"
+      className="min-h-screen overflow-hidden bg-cyan-300 p-8 py-20 sm:p-16 md:p-32"
     >
       <motion.h2
         className="mb-5 mt-5 text-center font-inter text-2xl font-semibold md:mt-0"
