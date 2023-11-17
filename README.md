@@ -67,7 +67,7 @@ Hey there! I'm Ansar Ibrahim, and this repository is the beating heart of my per
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://ansaribrahim.netlify.app/)
+- [Live Demo Link](https://ansaribrahim.me/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
