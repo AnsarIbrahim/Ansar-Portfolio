@@ -74,7 +74,7 @@ const About = () => {
         <p className="about new1 mb-5 mt-5 text-left">
           Hi there! My name is Ansar Ibrahim, and I am a Full-Stack Developer
           proficient in various technologies such as JavaScript, React, Redux,
-          HTML5, CSS3, Ruby, Rails, PostgreSQL, and more. I have successfully
+          HTML5, CSS3, Ruby, Rails, PostgreSQL, and more. I have
           completed over 50 projects, which showcases my dedication to quality
           and innovation. If you&apos;d like to check out some of my work, feel free
           to visit my
