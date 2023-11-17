@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import img from '../../assests/Ansar.jpg';
 import '../../CSS/styles.css';
 import resume from '../../assests/Ansar-Resume.pdf';
+import skills from '.';
 
 const About = () => {
   const controlsImg = useAnimation();
@@ -44,7 +45,25 @@ const About = () => {
           className="h-20 w-20 rounded-full"
           style={{ filter: 'grayscale(100%)' }}
         />
+        <div className="mt-10 text-white">
+          <h2 className="new mb-5 text-4xl text-white">Skills</h2>
+          <div className="carousel">
+            <div className="carousel__track-container">
+              <ul className="carousel__track">
+                {skills.map((skill) => (
+                  <li
+                    key={skill.id}
+                    className={`carousel__slide ${skill.color}`}
+                  >
+                    {skill.icon}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
       </motion.div>
+
       <motion.div
         className="flex w-full flex-col items-start p-5 text-left"
         ref={refText}
@@ -53,10 +72,12 @@ const About = () => {
       >
         <h2 className="new mb-5 text-4xl text-white">About</h2>
         <p className="about new1 mb-5 mt-5 text-left">
-          I&apos;m Ansar Ibrahim, a Full-Stack Developer proficient in
-          JavaScript, React, Redux, HTML5, CSS3, Ruby, Rails, PostgreSQL, and
-          more. I &apos;ve completed 50+ projects, demonstrating my commitment
-          to quality and innovation. Visit my
+          Hi there! My name is Ansar Ibrahim, and I am a Full-Stack Developer
+          proficient in various technologies such as JavaScript, React, Redux,
+          HTML5, CSS3, Ruby, Rails, PostgreSQL, and more. I have successfully
+          completed over 50 projects, which showcases my dedication to quality
+          and innovation. If you&apos;d like to check out some of my work, feel free
+          to visit my
           {' '}
           <a
             href="https://github.com/AnsarIbrahim"
@@ -64,10 +85,11 @@ const About = () => {
             rel="noopener noreferrer"
             className="gradient-text text-white"
           >
-            GitHub profile
+            GitHub profile.
           </a>
           {' '}
-          for more. Reach out to me at
+          For any inquiries or collaboration opportunities, please do not
+          hesitate to contact me at
           {' '}
           <a
             href="mailto:ansaradheeb@gmail.com"
@@ -76,7 +98,6 @@ const About = () => {
             ansaradheeb@gmail.com
             {' '}
           </a>
-          for inquiries or collaborations.
         </p>
         <div className="my-4">
           <button

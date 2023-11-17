@@ -40,3 +40,30 @@
 .h-half {
   height: 110vh;
 }
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 0;
+  overflow: hidden;
+}
+
+.carousel__track-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+.carousel__slide {
+  width: calc(100% / 8);
+  flex: 0 0 auto;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
