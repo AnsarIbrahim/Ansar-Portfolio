@@ -20,7 +20,7 @@ const About = () => {
     }
     if (inViewText) {
       controlsText.start({
-        x: 0,
+        y: 0,
         opacity: 1,
         transition: { delay: 1, duration: 0.5 },
       });
@@ -48,7 +48,7 @@ const About = () => {
       <motion.div
         className="flex w-full flex-col items-start p-5 text-left"
         ref={refText}
-        initial={{ opacity: 0 }}
+        initial={{ y: '40vh', opacity: 0 }}
         animate={controlsText}
       >
         <h2 className="new mb-5 text-4xl text-white">About</h2>

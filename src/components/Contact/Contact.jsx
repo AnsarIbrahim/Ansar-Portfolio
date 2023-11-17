@@ -33,8 +33,8 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="flex min-h-screen justify-center bg-cyan-300">
-      <div className="new mt-10 text-center sm:mt-20">
+    <div id="contact" className="flex min-h-screen flex-col justify-center bg-cyan-300">
+      <div className="new mt-3 text-center sm:mt-20">
         <h1 className="new text-2xl sm:text-5xl lg:text-9xl">GET IN TOUCH</h1>
         <p className="mt-5 flex items-center justify-center p-5 text-center font-inter">
           Want to discuss your project? Or, just chat about latest in tech
@@ -79,7 +79,7 @@ const Contact = () => {
             </p>
           )}
         </form>
-        <div className="mb-5 mt-4 flex flex-col items-center justify-center lg:mt-16">
+        <div className="flex flex-col mt-10 sm:mt-20 items-center justify-center lg:mt-16">
           <h2 className="text-9xl">2023</h2>
           <div className="mt-5 flex gap-5">
             <a
