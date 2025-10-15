@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import _ from 'lodash';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -90,6 +91,13 @@ const Navbar = () => {
         >
           Contact
         </a>
+        <Link
+          to="/privacy-policy"
+          onClick={() => setIsOpen(false)}
+          className="w-full rounded px-3 py-2 text-center font-bold text-white hover:text-gray-300 lg:inline-flex lg:w-auto"
+        >
+          Privacy
+        </Link>
       </motion.div>
     </motion.nav>
   );
