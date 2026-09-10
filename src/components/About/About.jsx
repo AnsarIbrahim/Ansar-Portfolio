@@ -111,7 +111,7 @@ const About = () => (
       >
         <div className="flex items-end justify-between gap-4">
           <h3 className="text-xl font-semibold text-white sm:text-2xl">Tools I work with</h3>
-          <p className="hidden text-sm text-white/40 sm:block">Hover to pause</p>
+          <p className="hidden text-sm text-white/55 sm:block">Hover to pause</p>
         </div>
         <div className="marquee glass mt-6 overflow-hidden py-5 [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
           <ul className="marquee-track">

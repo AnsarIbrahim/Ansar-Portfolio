@@ -89,7 +89,7 @@ const Field = ({
     <label htmlFor={id} className="field-label">
       {label}
       {required && <span className="ml-1 text-pinkx">*</span>}
-      {hint && <span className="ml-2 normal-case tracking-normal text-white/30">{hint}</span>}
+      {hint && <span className="ml-2 normal-case tracking-normal text-white/50">{hint}</span>}
     </label>
     {children}
   </div>
@@ -382,7 +382,7 @@ const Contact = () => {
               <ValidationError errors={state.errors} className="text-sm text-pinkx" />
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-xs text-white/40">
+                <p className="text-xs text-white/55">
                   <span className="text-pinkx">*</span>
                   {' '}
                   Required fields. No spam, ever.

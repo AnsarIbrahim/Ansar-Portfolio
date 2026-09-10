@@ -103,7 +103,7 @@ const Dropdown = ({
           disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
         } ${open ? 'border-primary/70 bg-white/[0.06] ring-2 ring-primary/30' : ''}`}
       >
-        <span className={value ? 'text-white' : 'text-white/30'}>
+        <span className={value ? 'text-white' : 'text-white/50'}>
           {value || placeholder}
         </span>
         <FaChevronDown

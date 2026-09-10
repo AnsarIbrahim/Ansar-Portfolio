@@ -54,7 +54,7 @@ const Navbar = () => {
           <img src={Logo} alt="Ansar Ibrahim" className="h-9 w-9 rounded-xl" />
           <span className="text-sm font-semibold tracking-tight text-white">
             Ansar Ibrahim
-            <span className="ml-2 hidden text-white/40 sm:inline">/ Software Developer, Coimbatore</span>
+            <span className="ml-2 hidden text-white/55 sm:inline">/ Software Developer, Coimbatore</span>
           </span>
         </Link>
 

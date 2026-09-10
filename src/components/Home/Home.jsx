@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
-import img from '../../assests/Ansar.jpg';
+import img from '../../assests/Ansar.webp';
 import site from '../../seo/site';
 
 const stats = [
@@ -31,40 +31,32 @@ const Home = () => (
 
     <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]">
       <div>
-        <motion.span
-          className="eyebrow"
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={0}
-        >
+        {/*
+          The badge, heading and summary are the LCP candidate on this page.
+          They render plain and visible on the very first paint instead of
+          being animated in with framer-motion — an opacity:0 initial state
+          on above-the-fold text delays LCP until React hydrates and the
+          animation completes, which measured as a ~3.2s "element render
+          delay" in Lighthouse. Motion is reserved for lower-priority,
+          below-the-fold-of-attention elements (buttons, stats, photo).
+        */}
+        <span className="eyebrow">
           <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
           Software Developer · Coimbatore, Tamil Nadu, India
-        </motion.span>
+        </span>
 
-        <motion.h1
+        <h1
           id="hero-title"
           className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={1}
         >
           World-class
           {' '}
           <span className="gradient-text">software developer</span>
           {' '}
           from Coimbatore, India.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          id="hero-summary"
-          className="section-sub"
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          custom={2}
-        >
+        <p id="hero-summary" className="section-sub">
           I&apos;m Ansar Ibrahim, a software engineer, full-stack, MERN and
           mobile developer and forward deployed engineer based in
           {' '}
@@ -88,14 +80,14 @@ const Home = () => (
             AI Techies
           </a>
           , a digital product studio.
-        </motion.p>
+        </p>
 
         <motion.div
           className="mt-8 flex flex-wrap items-center gap-3"
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          custom={3}
+          custom={0}
         >
           <a href="#work" className="btn-primary">
             View my work
@@ -131,7 +123,7 @@ const Home = () => (
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          custom={4}
+          custom={1}
         >
           {stats.map((s) => (
             <div key={s.label} className="px-3 first:pl-0 sm:px-4">

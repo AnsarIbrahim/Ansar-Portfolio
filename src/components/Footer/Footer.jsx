@@ -43,7 +43,7 @@ const Footer = () => (
         ))}
       </div>
     </div>
-    <p className="container-x mt-6 text-center text-xs text-white/40 sm:text-left">
+    <p className="container-x mt-6 text-center text-xs text-white/55 sm:text-left">
       ©
       {' '}
       {new Date().getFullYear()}

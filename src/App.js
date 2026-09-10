@@ -2,6 +2,7 @@ import React, { useEffect, useMemo } from 'react';
 import {
   BrowserRouter as Router, Routes, Route, Navigate, useLocation,
 } from 'react-router-dom';
+import { IconContext } from 'react-icons';
 import {
   Navbar, Home, About, Services, Recent, Add, FAQ, Locations, Contact, Footer, PrivacyPolicy,
 } from './components';
@@ -75,18 +76,27 @@ const PrivacyPage = () => {
   );
 };
 
+// None of the icons in this app carry their own label — the visible text
+// next to them, or an aria-label on their parent link/button, already does
+// that job. Hiding every react-icons SVG from the accessibility tree by
+// default avoids duplicate/empty announcements (e.g. an unlabelled
+// role="img" svg) without having to touch each icon usage individually.
+const iconContextValue = { attr: { 'aria-hidden': 'true', focusable: 'false' } };
+
 const App = () => (
   <ErrorBoundary>
-    <Router>
-      <ScrollManager />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <IconContext.Provider value={iconContextValue}>
+      <Router>
+        <ScrollManager />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </IconContext.Provider>
   </ErrorBoundary>
 );
 

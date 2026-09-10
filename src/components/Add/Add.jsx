@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import Contact from '../../assests/contact.jpeg';
+import Contact from '../../assests/contact.webp';
 
 const Add = () => (
   <section className="relative overflow-hidden py-24 sm:py-32">
