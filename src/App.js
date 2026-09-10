@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo } from 'react';
 import {
-  BrowserRouter as Router, Routes, Route, useLocation,
+  BrowserRouter as Router, Routes, Route, Navigate, useLocation,
 } from 'react-router-dom';
 import {
   Navbar, Home, About, Services, Recent, Add, FAQ, Locations, Contact, Footer, PrivacyPolicy,
-  NotFound,
 } from './components';
 import Seo from './seo/Seo';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
@@ -84,7 +83,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/privacy-policy" element={<PrivacyPage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </Router>
