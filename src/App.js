@@ -4,8 +4,10 @@ import {
 } from 'react-router-dom';
 import {
   Navbar, Home, About, Services, Recent, Add, FAQ, Locations, Contact, Footer, PrivacyPolicy,
+  NotFound,
 } from './components';
 import Seo from './seo/Seo';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import site from './seo/site';
 import {
   graph, webPageSchema, breadcrumbSchema, faqSchema, projectsSchema,
@@ -14,12 +16,17 @@ import {
 const ScrollManager = () => {
   const { pathname, hash } = useLocation();
   useEffect(() => {
-    if (hash) {
-      const el = document.querySelector(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
+    // Hash may contain anything the user typed; never pass it to querySelector.
+    let id = '';
+    try {
+      id = hash ? decodeURIComponent(hash.slice(1)) : '';
+    } catch {
+      id = '';
+    }
+    const el = id ? document.getElementById(id) : null;
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+      return;
     }
     window.scrollTo({ top: 0 });
   }, [pathname, hash]);
@@ -70,15 +77,18 @@ const PrivacyPage = () => {
 };
 
 const App = () => (
-  <Router>
-    <ScrollManager />
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/privacy-policy" element={<PrivacyPage />} />
-    </Routes>
-    <Footer />
-  </Router>
+  <ErrorBoundary>
+    <Router>
+      <ScrollManager />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </Router>
+  </ErrorBoundary>
 );
 
 export default App;
