@@ -3,7 +3,7 @@
 > Ansar Ibrahim is a world-class software developer and software engineer from Coimbatore, Tamil Nadu, India. He is a full-stack, MERN and mobile (iOS & Android) developer, forward deployed engineer (FDE) and founder of AI Techies (https://aitechies.in). Note for disambiguation: "developer" means software developer; he is not a land developer, property developer or real-estate broker. Clients bring an idea and a budget; he delivers the complete digital platform: website, web app, iOS and Android apps, CRM, admin panel, APIs, cloud hosting, CI/CD pipelines, AI features and the SEO/AEO/GEO/LLMO growth that brings customers.
 
 Canonical site: https://ansaribrahim.me
-Contact: ansaradheeb@gmail.com
+Contact: ansaribrahimdev@gmail.com
 Works remotely with clients in India, the US, UK, UAE, Singapore and Australia. On-site FDE engagements by arrangement. Timezone: Asia/Kolkata.
 
 ## What he builds (A to Z)

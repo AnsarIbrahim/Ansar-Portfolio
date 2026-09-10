@@ -84,7 +84,7 @@ const About = () => (
               <FaExternalLinkAlt className="text-xs" />
               Visit AI Techies
             </a>
-            <a href="mailto:ansaradheeb@gmail.com" className="btn-ghost">
+            <a href="mailto:ansaribrahimdev@gmail.com" className="btn-ghost">
               <FaEnvelope className="text-xs" />
               Email me
             </a>

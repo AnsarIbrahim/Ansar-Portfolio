@@ -126,7 +126,7 @@ const sections = [
       <p>
         Questions about this policy? Email me at
         {' '}
-        <a href="mailto:ansaradheeb@gmail.com">ansaradheeb@gmail.com</a>
+        <a href="mailto:ansaribrahimdev@gmail.com">ansaribrahimdev@gmail.com</a>
         {' '}
         or use the contact form on the home page.
       </p>

@@ -20,8 +20,8 @@ const site = {
     'Ansar Ibrahim is a world-class software developer and software engineer from Coimbatore, Tamil Nadu, India, and the founder of AI Techies. Full-stack, MERN and mobile (iOS & Android) developer and forward deployed engineer. Give him an idea and a budget and he ships the entire digital platform: website, web app, iOS/Android apps, CRM, admin panel, APIs, cloud hosting on AWS, Google Cloud or DigitalOcean, CI/CD pipelines and SEO/AEO/GEO/LLMO growth. Stack: JavaScript, TypeScript, React, Next.js, Node.js, Python, Django, FastAPI, Ruby on Rails, PostgreSQL, MongoDB, React Native.',
   shortDescription:
     'World-class software developer and engineer in Coimbatore, Tamil Nadu, India. Idea + budget in, complete digital platform out: web, iOS/Android apps, CRM, cloud, CI/CD and SEO.',
-  email: 'ansaradheeb@gmail.com',
-  altEmail: 'ansaribrahimdev@gmail.com',
+  email: 'ansaribrahimdev@gmail.com',
+  altEmail: 'ansaradheeb@gmail.com',
   image: '/og-image.png',
   logo: '/favicon.svg',
   locale: 'en_IN',

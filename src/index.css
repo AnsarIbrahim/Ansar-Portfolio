@@ -68,17 +68,6 @@ body {
     @apply w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-white/30 transition focus:border-primary/70 focus:bg-white/[0.06] focus:outline-none focus:ring-2 focus:ring-primary/30;
   }
 
-  select.field {
-    @apply appearance-none bg-no-repeat pr-10;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23ffffff99' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    background-position: right 0.9rem center;
-  }
-
-  select.field option {
-    background: #07021a;
-    color: #f8fafc;
-  }
-
   .gradient-text {
     /* Plain CSS on purpose: @apply with via-* emits a second rule that resets
        the end colour to transparent, which made the last letters fade out. */

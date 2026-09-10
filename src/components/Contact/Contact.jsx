@@ -14,6 +14,7 @@ import {
   FaPaperPlane,
 } from 'react-icons/fa';
 import { collectLeadMeta } from '../../utils/leadMeta';
+import Dropdown from './Dropdown';
 
 const PROJECT_TYPES = [
   'Complete digital platform (web + apps + CRM)',
@@ -162,8 +163,8 @@ const Contact = () => {
               </span>
               <div>
                 <p className="text-white/50">Email</p>
-                <a href="mailto:ansaradheeb@gmail.com" className="font-medium text-white hover:text-primary-light">
-                  ansaradheeb@gmail.com
+                <a href="mailto:ansaribrahimdev@gmail.com" className="font-medium text-white hover:text-primary-light">
+                  ansaribrahimdev@gmail.com
                 </a>
               </div>
             </li>
@@ -272,28 +273,45 @@ const Contact = () => {
                 <legend className="mb-1 text-sm font-semibold text-white">About the project</legend>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Field id="projectType" label="What do you need?" required>
-                    <select id="projectType" name="projectType" className="field" value={form.projectType} onChange={onChange} required>
-                      <option value="" disabled>Select a project type</option>
-                      {PROJECT_TYPES.map((o) => <option key={o} value={o}>{o}</option>)}
-                    </select>
+                    <Dropdown
+                      id="projectType"
+                      name="projectType"
+                      value={form.projectType}
+                      onChange={onChange}
+                      options={PROJECT_TYPES}
+                      placeholder="Select a project type"
+                      required
+                    />
                   </Field>
                   <Field id="budget" label="Budget range">
-                    <select id="budget" name="budget" className="field" value={form.budget} onChange={onChange}>
-                      <option value="">Select a budget</option>
-                      {BUDGETS.map((o) => <option key={o} value={o}>{o}</option>)}
-                    </select>
+                    <Dropdown
+                      id="budget"
+                      name="budget"
+                      value={form.budget}
+                      onChange={onChange}
+                      options={BUDGETS}
+                      placeholder="Select a budget"
+                    />
                   </Field>
                   <Field id="timeline" label="Timeline">
-                    <select id="timeline" name="timeline" className="field" value={form.timeline} onChange={onChange}>
-                      <option value="">When do you want to start?</option>
-                      {TIMELINES.map((o) => <option key={o} value={o}>{o}</option>)}
-                    </select>
+                    <Dropdown
+                      id="timeline"
+                      name="timeline"
+                      value={form.timeline}
+                      onChange={onChange}
+                      options={TIMELINES}
+                      placeholder="When do you want to start?"
+                    />
                   </Field>
                   <Field id="hearAbout" label="How did you find me?">
-                    <select id="hearAbout" name="hearAbout" className="field" value={form.hearAbout} onChange={onChange}>
-                      <option value="">Select an option</option>
-                      {SOURCES.map((o) => <option key={o} value={o}>{o}</option>)}
-                    </select>
+                    <Dropdown
+                      id="hearAbout"
+                      name="hearAbout"
+                      value={form.hearAbout}
+                      onChange={onChange}
+                      options={SOURCES}
+                      placeholder="Select an option"
+                    />
                   </Field>
                 </div>
 
