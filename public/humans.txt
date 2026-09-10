@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Ansar Ibrahim
+Site: https://ansaribrahim.me
+Location: Coimbatore, Tamil Nadu, India
+Company: AI Techies — https://aitechies.in
+
+/* SITE */
+Stack: React, Tailwind CSS, Framer Motion, Formspree
+Language: English

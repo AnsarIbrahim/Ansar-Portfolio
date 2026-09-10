@@ -1,122 +1,145 @@
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import img from '../../assests/Ansar.jpg';
-import '../../CSS/styles.css';
-import resume from '../../assests/Ansar-Resume.pdf';
+import { motion } from 'framer-motion';
+import { FaArrowRight, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa';
 import skills from '.';
+import { stack } from '../../seo/content';
 
-const About = () => {
-  const controlsImg = useAnimation();
-  const controlsText = useAnimation();
-  const { ref: refImg, inView: inViewImg } = useInView({ triggerOnce: true });
-  const { ref: refText, inView: inViewText } = useInView({ triggerOnce: true });
+const highlights = [
+  {
+    title: 'Web, MERN & Next.js',
+    text: 'React, Next.js, Node, Express and MongoDB or PostgreSQL. Python with Django and FastAPI, or Ruby on Rails, when they fit better.',
+  },
+  {
+    title: 'iOS & Android apps',
+    text: 'React Native, Expo, Swift and Kotlin apps published to the App Store and Google Play, sharing one backend with the web.',
+  },
+  {
+    title: 'CRM, admin & cloud',
+    text: 'Back-offices, dashboards and APIs deployed on AWS, Google Cloud or DigitalOcean with Docker, CI/CD, monitoring and backups.',
+  },
+  {
+    title: 'Found & cited',
+    text: 'SEO, AEO, GEO and LLMO baked in, so the product ranks on Google and gets quoted by ChatGPT and Gemini.',
+  },
+];
 
-  React.useEffect(() => {
-    if (inViewImg) {
-      controlsImg.start({
-        x: 0,
-        transition: { delay: 1, duration: 0.5 },
-      });
-    }
-    if (inViewText) {
-      controlsText.start({
-        y: 0,
-        opacity: 1,
-        transition: { delay: 1, duration: 0.5 },
-      });
-    }
-  }, [controlsImg, inViewImg, controlsText, inViewText]);
+const reveal = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
 
-  return (
-    <div
-      id="about"
-      className="flex min-h-screen w-full flex-col items-center justify-center bg-black lg:flex-row lg:justify-around lg:p-40"
-    >
+const About = () => (
+  <section id="about" className="relative overflow-hidden py-24 sm:py-32">
+    <div className="orb right-0 top-40 h-80 w-80 bg-primary/70" />
+    <div className="container-x relative">
       <motion.div
-        className="mb-10 flex w-full flex-col items-start p-5 text-left"
-        ref={refImg}
-        initial={{ x: '-40vw' }}
-        animate={controlsImg}
+        variants={reveal}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1, margin: '0px 0px -10% 0px' }}
+        className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20"
       >
-        <img
-          src={img}
-          alt="img"
-          className="h-20 w-20 rounded-full"
-          style={{ filter: 'grayscale(100%)' }}
-        />
-        <div className="mt-10 text-white">
-          <h2 className="new mb-5 text-4xl text-white">Skills</h2>
-          <div className="carousel">
-            <div className="carousel__track-container">
-              <ul className="carousel__track">
-                {skills.map((skill) => (
-                  <li
-                    key={skill.id}
-                    className={`carousel__slide ${skill.color}`}
-                  >
-                    {skill.icon}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="flex w-full flex-col items-start p-5 text-left"
-        ref={refText}
-        initial={{ y: '40vh', opacity: 0 }}
-        animate={controlsText}
-      >
-        <h2 className="new mb-5 text-4xl text-white">About</h2>
-        <p className="about new1 mb-5 mt-5 text-left">
-          Hi there! My name is Ansar Ibrahim, and I am a Full-Stack Developer
-          proficient in various technologies such as JavaScript, React, Redux,
-          HTML5, CSS3, Ruby, Rails, PostgreSQL, and more. I have
-          completed over 50 projects, which showcases my dedication to quality
-          and innovation. If you&apos;d like to check out some of my work, feel free
-          to visit my
-          {' '}
-          <a
-            href="https://github.com/AnsarIbrahim"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="gradient-text text-white"
-          >
-            GitHub profile.
-          </a>
-          {' '}
-          For any inquiries or collaboration opportunities, please do not
-          hesitate to contact me at
-          {' '}
-          <a
-            href="mailto:ansaradheeb@gmail.com"
-            className="gradient-text text-white"
-          >
-            ansaradheeb@gmail.com
+        <div>
+          <span className="eyebrow">About me</span>
+          <h2 className="section-title mt-5">
+            One engineer. The entire product, A to Z.
+          </h2>
+          <p className="section-sub">
+            Hi, I&apos;m Ansar. Clients bring me an idea and a budget, and I
+            deliver the whole digital business: the website, the web app, the
+            iOS and Android apps, the CRM and admin panel, the APIs, the cloud
+            setup, the CI/CD pipeline and the SEO. Over 50 products shipped
+            across e-commerce, marketplaces, dashboards and content platforms.
+          </p>
+          <p className="section-sub !mt-3">
+            I also work as a forward deployed engineer, embedded with your team
+            or customer to integrate and ship in the real environment.
+          </p>
+          <p className="section-sub !mt-3">
+            When I&apos;m not writing code I&apos;m running
             {' '}
-          </a>
-        </p>
-        <div className="my-4">
-          <button
-            type="button"
-            className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-          >
             <a
-              href={resume}
-              className="text-white no-underline"
+              href="https://aitechies.in/"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-white underline decoration-primary/60 underline-offset-4 hover:decoration-primary"
             >
-              Get my Resume
+              AI Techies
             </a>
-          </button>
+            , where we design and ship web, mobile and AI products for clients.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" className="btn-primary">
+              Start a project
+              <FaArrowRight className="text-xs" />
+            </a>
+            <a
+              href="https://aitechies.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost"
+            >
+              <FaExternalLinkAlt className="text-xs" />
+              Visit AI Techies
+            </a>
+            <a href="mailto:ansaradheeb@gmail.com" className="btn-ghost">
+              <FaEnvelope className="text-xs" />
+              Email me
+            </a>
+          </div>
+        </div>
+
+        <div className="grid content-start gap-4 sm:grid-cols-2">
+          {highlights.map((h) => (
+            <div key={h.title} className="glass p-5 transition hover:border-primary/40 hover:bg-white/[0.06]">
+              <div className="mb-3 h-1 w-8 rounded-full bg-gradient-to-r from-primary to-pinkx" />
+              <h3 className="text-base font-semibold text-white">{h.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/60">{h.text}</p>
+            </div>
+          ))}
         </div>
       </motion.div>
+
+      <motion.div
+        variants={reveal}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1, margin: '0px 0px -10% 0px' }}
+        className="mt-20"
+      >
+        <div className="flex items-end justify-between gap-4">
+          <h3 className="text-xl font-semibold text-white sm:text-2xl">Tools I work with</h3>
+          <p className="hidden text-sm text-white/40 sm:block">Hover to pause</p>
+        </div>
+        <div className="marquee glass mt-6 overflow-hidden py-5 [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
+          <ul className="marquee-track">
+            {[...skills, ...skills].map((s, i) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <li key={`${s.id}-${i}`} className="flex items-center gap-3 px-6">
+                <span className={`text-2xl ${s.color}`}>{s.icon}</span>
+                <span className="whitespace-nowrap text-sm font-medium text-white/80">{s.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {Object.entries(stack).map(([group, items]) => (
+            <div key={group} className="glass p-5">
+              <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">{group}</dt>
+              <dd className="mt-3 flex flex-wrap gap-1.5">
+                {items.map((it) => (
+                  <span key={it} className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-white/80">
+                    {it}
+                  </span>
+                ))}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </motion.div>
     </div>
-  );
-};
+  </section>
+);
 
 export default About;

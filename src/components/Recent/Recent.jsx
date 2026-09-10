@@ -1,130 +1,107 @@
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import { projects, CustomRightArrow, CustomLeftArrow } from './index';
-import '../../CSS/styles.css';
+import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import projects from './index';
 
-const useScrollAnimation = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true });
-
-  React.useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        transition: { delay: 0.2, duration: 0.5 },
-      });
-    }
-  }, [controls, inView]);
-
-  return [ref, controls];
+const card = {
+  hidden: { opacity: 0, y: 24 },
+  show: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.08 * i, duration: 0.5, ease: 'easeOut' },
+  }),
 };
 
-const Recent = () => {
-  const [h2Ref, h2Controls] = useScrollAnimation();
+const Recent = () => (
+  <section id="work" className="relative overflow-hidden py-24 sm:py-32">
+    <div className="orb -left-20 bottom-20 h-80 w-80 bg-cyanx/50" />
+    <div className="container-x relative">
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <span className="eyebrow">Selected work</span>
+          <h2 className="section-title mt-5">Recent projects</h2>
+          <p className="section-sub">
+            A mix of client work and open-source builds. Every project ships
+            with a live demo and public source code.
+          </p>
+        </div>
+        <a
+          href="https://github.com/AnsarIbrahim?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-ghost self-start sm:self-auto"
+        >
+          <FaGithub />
+          All repositories
+        </a>
+      </div>
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-
-  return (
-    <div
-      id="recent"
-      className="min-h-screen overflow-hidden bg-cyan-300 p-8 py-20 sm:p-16 md:p-32"
-    >
-      <motion.h2
-        className="mb-5 mt-5 text-center font-inter text-2xl font-semibold md:mt-0"
-        ref={h2Ref}
-        initial={{ opacity: 0 }}
-        animate={h2Controls}
-        transition={{ delay: 0.2 }}
-      >
-        My Recent Projects
-      </motion.h2>
-      <Carousel
-        customRightArrow={<CustomRightArrow />}
-        customLeftArrow={<CustomLeftArrow />}
-        infinite
-        showDots
-        dotListClass="custom-dot-list-style"
-        showThumbs={false}
-        showStatus={false}
-        autoPlay
-        interval={2000}
-        transitionTime={1000}
-        responsive={responsive}
-      >
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="m-2 mt-20 flex min-h-[500px] flex-col items-center justify-center rounded-lg bg-transparent p-4 shadow-2xl transition-transform duration-200 hover:scale-105 sm:m-4 sm:min-h-[300px] sm:p-8"
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((p, i) => (
+          <motion.article
+            key={p.id}
+            variants={card}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1, margin: '0px 0px -10% 0px' }}
+            custom={i % 3}
+            className={`glass group flex flex-col overflow-hidden shadow-card transition hover:-translate-y-1 hover:border-primary/40 ${
+              p.featured ? 'sm:col-span-2 lg:col-span-2' : ''
+            }`}
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-24 w-24 rounded-lg sm:h-32 sm:w-32 md:h-48 md:w-48"
-            />
-            <h3 className="mt-4 text-xl font-bold sm:text-lg">
-              {project.title}
-            </h3>
-            <p className="mt-2 text-sm sm:w-full">{project.description}</p>
-            <div className="flex flex-wrap">
-              {project.tech.map((tag) => (
-                <span
-                  key={tag.name}
-                  className={`m-1 ${tag.color} rounded px-2 py-1 text-xs font-semibold tracking-wider`}
-                >
-                  {tag.name}
+            <div className="relative aspect-[16/10] overflow-hidden bg-ink2">
+              <img
+                src={p.image}
+                alt={p.title}
+                loading="lazy"
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+              {p.featured && (
+                <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-ink">
+                  Featured
                 </span>
-              ))}
+              )}
             </div>
-            <div className="mt-4">
-              <button
-                type="button"
-                className="mr-2 rounded bg-blue-500 px-4 py-2 font-bold text-white transition-colors duration-200 hover:bg-blue-700"
-              >
+            <div className="flex flex-1 flex-col p-5">
+              <h3 className="text-lg font-semibold text-white">{p.title}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-white/60">{p.description}</p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {p.tech.map((t) => (
+                  <li
+                    key={t}
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-medium text-white/70"
+                  >
+                    {t}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-5 flex items-center gap-4 border-t border-white/10 pt-4 text-sm">
                 <a
-                  href={project.live}
-                  className="text-white no-underline"
+                  href={p.live}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-medium text-white transition hover:text-primary-light"
                 >
-                  Live
+                  <FaExternalLinkAlt className="text-xs" />
+                  Live demo
                 </a>
-              </button>
-              <button
-                type="button"
-                className="rounded bg-green-500 px-4 py-2 font-bold text-white transition-colors duration-200 hover:bg-green-700"
-              >
                 <a
-                  href={project.source}
-                  className="text-white no-underline"
+                  href={p.source}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-medium text-white/60 transition hover:text-white"
                 >
+                  <FaGithub />
                   Source
                 </a>
-              </button>
+              </div>
             </div>
-          </div>
+          </motion.article>
         ))}
-      </Carousel>
+      </div>
     </div>
-  );
-};
+  </section>
+);
 
 export default Recent;

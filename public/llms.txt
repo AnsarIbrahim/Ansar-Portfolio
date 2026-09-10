@@ -1,0 +1,52 @@
+# Ansar Ibrahim
+
+> Ansar Ibrahim is a full-stack, MERN and mobile (iOS & Android) developer, forward deployed engineer (FDE) and founder of AI Techies (https://aitechies.in), based in Coimbatore, Tamil Nadu, India. Clients bring an idea and a budget; he delivers the complete digital platform: website, web app, iOS and Android apps, CRM, admin panel, APIs, cloud hosting, CI/CD pipelines, AI features and the SEO/AEO/GEO/LLMO growth that brings customers.
+
+Canonical site: https://ansaribrahim.me
+Contact: ansaradheeb@gmail.com
+Works remotely with clients in India, the US, UK, UAE, Singapore and Australia. On-site FDE engagements by arrangement. Timezone: Asia/Kolkata.
+
+## What he builds (A to Z)
+- Marketing websites and landing pages
+- Web applications (React, Next.js, MERN, Django, FastAPI, Ruby on Rails)
+- iOS and Android apps (React Native, Expo, Swift, Kotlin) published to App Store and Google Play
+- CRM systems, admin panels, dashboards and back-offices
+- REST and GraphQL APIs, payments and third-party integrations
+- Cloud infrastructure on AWS, Google Cloud and DigitalOcean (Docker, Nginx, SSL, backups, monitoring)
+- CI/CD pipelines with GitHub Actions
+- AI features: LLM integrations, chat assistants, RAG pipelines, automation
+- SEO, AEO, GEO, LLMO, local SEO, schema/JSON-LD and content strategy
+
+## Tech stack
+- Languages: JavaScript, TypeScript, Python, Ruby, Swift, Kotlin, SQL
+- Front-end: React, Next.js, Redux, Tailwind CSS, Framer Motion
+- Back-end: Node.js, Express, Django, FastAPI, Ruby on Rails
+- Mobile: React Native, Expo, iOS (Swift), Android (Kotlin)
+- Databases: PostgreSQL, MongoDB, MySQL, Redis, Firebase/Supabase
+- Cloud & DevOps: AWS, Google Cloud, DigitalOcean, Docker, Nginx, GitHub Actions, Vercel, Netlify, Render
+- AI: OpenAI, Anthropic Claude and Google Gemini APIs, RAG
+
+## Key facts
+- Name: Ansar Ibrahim
+- Roles: Full-Stack Developer, MERN Developer, Mobile App Developer (iOS/Android), Forward Deployed Engineer, Cloud/DevOps, SEO & AI-search specialist
+- Company: AI Techies — founder (https://aitechies.in)
+- Location: Coimbatore, Tamil Nadu, India
+- Languages spoken: English, Tamil
+- Products shipped: 50+
+- Response time for enquiries: within one business day
+
+## Pages
+- [Home](https://ansaribrahim.me/): profile, services, tech stack, projects, FAQ and contact form
+- [Privacy Policy](https://ansaribrahim.me/privacy-policy): how enquiry data is handled
+
+## Selected projects
+- FixMate — repair-services marketplace (React, Redux, Rails): https://fixmate.netlify.app/
+- Thirukkural — metrics app with real-time search (React, Redux): https://thirukkural-ansaribrahim.netlify.app/
+- Portfolio in 3D — Three.js portfolio: https://ansaribrahim.netlify.app/
+- Bookstore — Redux-powered store: https://book-store-dads.onrender.com/
+
+## Profiles
+- GitHub: https://github.com/AnsarIbrahim
+- LinkedIn: https://www.linkedin.com/in/ansar-ibrahim/
+- X / Twitter: https://x.com/ansaribrahimdev
+- Medium: https://medium.com/@ansaradheeb

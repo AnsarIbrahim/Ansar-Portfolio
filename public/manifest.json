@@ -1,0 +1,13 @@
+{
+  "name": "Ansar Ibrahim — Full-Stack Developer & AI Search Specialist",
+  "short_name": "Ansar Ibrahim",
+  "description": "Full-stack developer and founder of AI Techies. React, Rails and PostgreSQL products with SEO, AEO, GEO and LLMO built in.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030008",
+  "theme_color": "#030008",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
