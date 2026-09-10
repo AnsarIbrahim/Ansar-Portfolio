@@ -48,8 +48,8 @@ const Footer = () => (
       {' '}
       {new Date().getFullYear()}
       {' '}
-      Ansar Ibrahim · Full-Stack, MERN & Mobile Developer · Cloud, CI/CD & SEO ·
-      Coimbatore, India. Built with React & Tailwind CSS.
+      Ansar Ibrahim · World-class software developer & software engineer ·
+      Coimbatore, Tamil Nadu, India. Built with React & Tailwind CSS.
     </p>
   </footer>
 );

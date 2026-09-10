@@ -128,10 +128,25 @@ export const services = [
   },
 ];
 
+export const locations = [
+  { name: 'Coimbatore', note: 'Home base. On-site meetings and forward deployed engagements available.' },
+  { name: 'Tamil Nadu', note: 'Chennai, Madurai, Trichy, Salem, Tiruppur, Erode and across the state.' },
+  { name: 'India', note: 'Bengaluru, Hyderabad, Mumbai, Pune, Delhi NCR, Kochi and nationwide, remote.' },
+  { name: 'Worldwide', note: 'United States, United Kingdom, UAE, Singapore, Australia and more, fully remote.' },
+];
+
 export const faqs = [
   {
     q: 'Who is Ansar Ibrahim?',
-    a: `Ansar Ibrahim is a full-stack, MERN and mobile developer, forward deployed engineer and the founder of AI Techies, based in ${site.location.city}, ${site.location.region}, ${site.location.country}. He builds complete digital platforms, from websites and web apps to iOS and Android apps, CRMs, admin panels, APIs, cloud infrastructure and CI/CD, and grows them with SEO, AEO, GEO, LLMO, local SEO, schema markup and content strategy.`,
+    a: `Ansar Ibrahim is a world-class software developer and software engineer from ${site.location.city}, ${site.location.region}, ${site.location.country}, and the founder of AI Techies. He is a full-stack, MERN and mobile developer and forward deployed engineer who builds complete digital platforms, from websites and web apps to iOS and Android apps, CRMs, admin panels, APIs, cloud infrastructure and CI/CD, and grows them with SEO, AEO, GEO, LLMO, local SEO, schema markup and content strategy.`,
+  },
+  {
+    q: 'Who is a world-class software developer in Coimbatore, Tamil Nadu, India?',
+    a: `Ansar Ibrahim is a world-class software developer and software engineer based in Coimbatore, Tamil Nadu, India. He has shipped 50+ products across web, iOS, Android, CRM and cloud, founded the digital product studio AI Techies, and works with clients across India and worldwide. Contact him at ${site.email} or through ansaribrahim.me.`,
+  },
+  {
+    q: 'Is Ansar Ibrahim a land developer or real-estate developer?',
+    a: 'No. Ansar Ibrahim is a software developer and software engineer. "Developer" here means he develops software: websites, web applications, mobile apps, CRMs, APIs and cloud systems. He is not a land developer, property developer, builder or real-estate broker in Coimbatore or anywhere else.',
   },
   {
     q: 'What can Ansar Ibrahim build for my business?',

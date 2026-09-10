@@ -42,13 +42,15 @@ const About = () => (
         <div>
           <span className="eyebrow">About me</span>
           <h2 className="section-title mt-5">
-            One engineer. The entire product, A to Z.
+            One software engineer. The entire product, A to Z.
           </h2>
           <p className="section-sub">
-            Hi, I&apos;m Ansar. Clients bring me an idea and a budget, and I
-            deliver the whole digital business: the website, the web app, the
-            iOS and Android apps, the CRM and admin panel, the APIs, the cloud
-            setup, the CI/CD pipeline and the SEO. Over 50 products shipped
+            Hi, I&apos;m Ansar Ibrahim, a software developer and software
+            engineer from Coimbatore, Tamil Nadu, India. Clients bring me an
+            idea and a budget, and I deliver the whole digital business: the
+            website, the web app, the iOS and Android apps, the CRM and admin
+            panel, the APIs, the cloud setup, the CI/CD pipeline and the SEO.
+            Over 50 products shipped
             across e-commerce, marketplaces, dashboards and content platforms.
           </p>
           <p className="section-sub !mt-3">

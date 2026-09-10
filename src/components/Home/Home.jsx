@@ -39,7 +39,7 @@ const Home = () => (
           custom={0}
         >
           <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
-          Available for new projects
+          Software Developer · Coimbatore, Tamil Nadu, India
         </motion.span>
 
         <motion.h1
@@ -50,11 +50,11 @@ const Home = () => (
           animate="show"
           custom={1}
         >
-          Your idea and budget in.
-          <br />
-          <span className="gradient-text">A complete digital platform</span>
+          World-class
           {' '}
-          out.
+          <span className="gradient-text">software developer</span>
+          {' '}
+          from Coimbatore, India.
         </motion.h1>
 
         <motion.p
@@ -65,17 +65,19 @@ const Home = () => (
           animate="show"
           custom={2}
         >
-          I&apos;m Ansar Ibrahim, a full-stack, MERN and mobile developer and
-          forward deployed engineer based in
+          I&apos;m Ansar Ibrahim, a software engineer, full-stack, MERN and
+          mobile developer and forward deployed engineer based in
           {' '}
           {site.location.city}
           ,
           {' '}
+          {site.location.region}
+          ,
+          {' '}
           {site.location.country}
-          . I build the whole thing end to end: website, web app, iOS and
-          Android apps, CRM and admin panel, APIs, cloud hosting, CI/CD and
-          the SEO that brings customers. React, Next.js, Node, Python, Django,
-          FastAPI, Rails and more. Founder of
+          . Your idea and budget in, a complete digital platform out: website,
+          web app, iOS and Android apps, CRM and admin panel, APIs, cloud
+          hosting, CI/CD and the SEO that brings customers. Founder of
           {' '}
           <a
             href="https://aitechies.in/"
@@ -155,7 +157,7 @@ const Home = () => (
           />
           <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-ink/70 p-4 backdrop-blur-md">
             <p className="text-sm font-semibold text-white">Ansar Ibrahim</p>
-            <p className="text-xs text-white/60">Full-Stack · Mobile · Cloud · SEO</p>
+            <p className="text-xs text-white/60">Software Developer & Engineer · Coimbatore, Tamil Nadu</p>
           </div>
         </div>
       </motion.div>

@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router, Routes, Route, useLocation,
 } from 'react-router-dom';
 import {
-  Navbar, Home, About, Services, Recent, Add, FAQ, Contact, Footer, PrivacyPolicy,
+  Navbar, Home, About, Services, Recent, Add, FAQ, Locations, Contact, Footer, PrivacyPolicy,
 } from './components';
 import Seo from './seo/Seo';
 import site from './seo/site';
@@ -46,6 +46,7 @@ const MainPage = () => {
       <About />
       <Services />
       <Recent />
+      <Locations />
       <FAQ />
       <Add />
       <Contact />
